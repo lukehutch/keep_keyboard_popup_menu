@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 const double _kMenuHorizontalPadding = 16.0;
 
@@ -29,8 +28,10 @@ class KeepKeyboardPopupMenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final PopupMenuThemeData popupMenuTheme = PopupMenuTheme.of(context);
-    TextStyle style =
-        textStyle ?? popupMenuTheme.textStyle ?? theme.textTheme.subtitle1!;
+    TextStyle style = textStyle ??
+        popupMenuTheme.textStyle ??
+        theme.textTheme.displayMedium ??
+        TextStyle(fontSize: 16.0);
 
     if (onTap == null) style = style.copyWith(color: theme.disabledColor);
 
