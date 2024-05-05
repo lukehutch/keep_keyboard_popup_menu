@@ -30,7 +30,7 @@ class KeepKeyboardPopupMenuItem extends StatelessWidget {
     final PopupMenuThemeData popupMenuTheme = PopupMenuTheme.of(context);
     TextStyle style = textStyle ??
         popupMenuTheme.textStyle ??
-        theme.textTheme.displayMedium ??
+        theme.textTheme.titleMedium ??
         TextStyle(fontSize: 16.0);
 
     if (onTap == null) style = style.copyWith(color: theme.disabledColor);
